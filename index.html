@@ -35,6 +35,38 @@
 
     <div id="results"></div>
 
+    <script id="apartment-template" type="text/x-handlebars-template">
+        
+            {{#each apartments}}
+            <div class="result">
+                <img src="{{img}}">
+                <p class="l-addr">Address: </p>
+                    <p class="address">{{address}} </p>
+                <p class="l-price">Price:</p>
+                    <p class="price">{{price}}</p>
+                <p class="l-rooms">Rooms:</p>
+                    <p class="rooms">{{rooms}} </p>  
+                {{#if immediate}}
+                <p class="l-immediate">contact Details:</p>
+                    <p class="immediate">{{contactDetails.name}} - {{contactDetails.email}} </p> 
+                {{/if}}
+                {{#if parking}}
+                <p class="l-park">Parking:</p>
+                    <p class="parking">Available </p> 
+                {{/if}}
+            </div>
+        
+        {{else}}
+        <div class= "no-match"> No Match Found </div>
+        {{/each}}
+    </script> 
+    
+            
+       
+    
+ 
+
+
     <!-- Your Code Here -->
     <!-- You should start doing handlebar stuff here -->
     <!-- Your Code Here -->
